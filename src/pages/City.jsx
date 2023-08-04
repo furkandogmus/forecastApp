@@ -1,20 +1,13 @@
-import { Navigate, useNavigate, useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import {cities} from "../service/Cities";
 import NoPage from "./NoPage";
-import { useState } from "react";
 import goBackIcon from '../assets/go_back.svg'
 import Forecast from "../components/Forecast";
 
 
 function City() {
   const navigate = useNavigate()
-  const [weatherCondition,setWeatherCondition] = useState({
-    description : '',
-    temp: '',
-    temp_min: '',
-    temp_max: '',
-    feels_like: ''
-  });
+
 
   var {name} = useParams();
 

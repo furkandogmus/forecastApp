@@ -10,7 +10,7 @@ function Forecast({ city }) {
     async function fetchData() {
       try {
         const data = await getForecast(city);
-        console.log(data)
+      
         const forecastProps = data.list.slice(0, 4).map((item) => ({
           feels_like: item.main.feels_like,
           date: item.dt_txt,

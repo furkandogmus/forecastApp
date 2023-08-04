@@ -39,7 +39,7 @@ export default Home;
 
 async function handleClick(object, navigate, setInputValue) {
   await writeInput(object.name, setInputValue);
-  navigate('../city/' + object.name.toLowerCase());
+  navigate('../city/' + object.name.toLocaleLowerCase('tr'));
 }
 
 async function writeInput(text, setInputValue) {
